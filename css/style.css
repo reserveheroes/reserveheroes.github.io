@@ -1,6 +1,8 @@
 body {
     background: url("../img/tes_start.gif");
-    background-size: 100%;
+    background-size: 170%;
+    background-position-x: 46.5%;
+    background-position-y: 50%;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
 h2 {
     font-family: 'Bahiana', cursive;
     text-align: center;
-    color: #000000;
+    color: #d43e96;
     font-size: 24px;
 }
 
@@ -22,8 +24,6 @@ img {
     max-width: 80vw;
     width: 800px;
     margin: 0 auto;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
     image-rendering: pixelated;
 }
 
