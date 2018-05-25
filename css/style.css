@@ -1,0 +1,49 @@
+body {
+    background: url("../img/tes_start.gif");
+    background-size: 100%;
+}
+
+h1 {
+    font-family: 'Bahiana', cursive;
+    text-align: center;
+    color: #d43e96;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Bahiana', cursive;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+}
+
+img {
+    display: block; 
+    max-width: 80vw;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.socialMedia {
+    text-align: center;
+    display:inline-block;
+    width: 100%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
