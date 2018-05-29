@@ -2,23 +2,104 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reserve Heroes</title>
-    <link href="https://fonts.googleapis.com/css?family=Bahiana" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Reserve Heroes : Pixel Fighting Game</title>
+    <link rel="icon" href="img/logo-favicon.png">
+
 </head>
 
 <body>
-    <img src="img/logo-pixel.png" alt="RESERVE HEROES">
-    <h2>
-        Not all heroes are perfect
-    </h2>
-    <div class="socialMedia">
-        <a href="https://twitter.com/ReserveHeroes" class="fa fa-twitter"></a>
+
+    <!-- NAVIGATION .. DESKTOP -->
+    <nav class="navbar-desktop"> 
+        <ul>
+            <li class="button" onclick="scrollToElement('#home-wrapper')">HOME</li>
+            <li class="button" onclick="scrollToElement('#screenshots-wrapper')">SCREENSHOTS</li>
+            <li class="button" id="character-button" onclick="scrollToElement('#characters-wrapper')">CHARACTERS</li>
+            <li class="button" onclick="scrollToElement('#about-wrapper')">ABOUT</li>
+            <li class="button"></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE .. HOME -->
+
+    <div class="grid-wrapper" id="overlay-wrapper" onclick="previewRemove()">
+
+        <img id="screenshot-preview" alt="Ganja Beach Stage, Yamon vs Willseek">
+
     </div>
+
+    <div class="grid-wrapper" id="site-wrapper">
+
+        <section class="grid-wrapper" id="home-wrapper">
+          
+        </section>
+
+        <section class="grid-wrapper" id="screenshots-wrapper">
+            
+            <h1 id="title-screenshots">SCREENSHOTS</h1> <!-- Ska lägga till olika bilder i framtiden .. -->
+            <img class="screenshots" id="screenshot-1" src="img/map_jamaica.gif" alt="Ganja Beach Stage, Yamon vs Willseek" onclick="previewImage('img/map_jamaica.gif')">
+            <img class="screenshots" id="screenshot-2" src="img/map_jamaica.gif" alt="Los Pollos Expresso Stage, Darito vs Big Daddy" onclick="previewImage('img/map_jamaica.gif')">
+            <img class="screenshots" id="screenshot-3" src="img/map_jamaica.gif" alt="Valley Of Nuts Stage, Master Dong vs Master Dong" onclick="previewImage('img/map_jamaica.gif')">
+
+            <img class="screenshots" id="screenshot-4" src="img/map_china.gif" alt="Ganja Beach Stage, Yamon vs Willseek" onclick="previewImage('img/map_china.gif')">
+            <img class="screenshots" id="screenshot-5" src="img/map_china.gif" alt="Los Pollos Expresso Stage, Darito vs Big Daddy" onclick="previewImage('img/map_china.gif')">
+            <img class="screenshots" id="screenshot-6" src="img/map_china.gif" alt="Valley Of Nuts Stage, Master Dong vs Master Dong" onclick="previewImage('img/map_china.gif')">
+
+        </section>
+    
+        <section class="grid-wrapper" id="characters-wrapper">
+            <h1 id="title-characters">CHARACTERS</h1>
+            <ul id="character-selection">
+                <li><img src="img/Yamon/selector.png" alt="Portrait of the selected character." onmouseover="previewCharacter('Yamon')"></li>
+                <li><img src="img/BigDaddy/selector.png" alt="Portrait of the selected character." onmouseover="previewCharacter('Big Daddy')"></li>
+                <li><img src="img/Yamon/selector.png" alt="Portrait of the selected character." onmouseover="previewCharacter('Yamon')"></li>
+            </ul>
+            <img id="character-portrait" src="img/Yamon/portrait.png" alt="Portrait of the selected character.">
+            <h2 id="character-name">Yamon</h2>
+            <p id="character-bios">It wasn't easy growing up with a single mother in the hood, especially when he was bullied for having small testicles. He was to tired and lazy to do anything against the bullies, untill one day he accidently mixed together a special mix that made him strong.</p>
+            
+            
+        </section>
+
+        <section class="grid-wrapper" id="about-wrapper">
+
+            <h1 id="title-about">ABOUT US</h1>
+
+            <div class="about-person" id="about-1">
+                <img src="img/portrait.png" alt="Portrait of the selected character.">
+                <h3>Martin - Programmer</h3>
+            </div> 
+            <div class="about-person" id="about-2">
+                <img src="img/portrait.png" alt="Portrait of the selected character.">
+                <h3>Ludde - Animator</h3>
+            </div> 
+            <div class="about-person" id="about-3">
+                <img src="img/portrait.png" alt="Portrait of the selected character.">
+                <h3>Olle - Artist</h3>
+            </div> 
+            <div class="about-person" id="about-4">
+                <img src="img/portrait.png" alt="Portrait of the selected character.">
+                <h3>Oscar - Music</h3>
+            </div>  
+
+        </section>
+
+        <section class="grid-wrapper" id="footer-wrapper">
+            <a target="_blank" id="footer-links" href="https://twitter.com/ReserveHeroes">Twitter * Youtube * Steam</a>
+            <p id="footer-copyright">Reserve Heroes - © Reserve Studios. 2018</p>
+        </section>
+
+    </div>
+
+
 </body>
 
 </html>

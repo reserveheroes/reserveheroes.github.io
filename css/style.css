@@ -1,52 +1,429 @@
+
+/* ################ Fonts & Text ################ */
+
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+h1{
+    font-family: 'VT323';
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 6px 6px #000000;
+}  
+
+h2{
+    text-decoration: underline;
+    font-family: 'VT323';
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 5px 5px #000000;
+}   
+
+h3{
+    text-decoration: underline;
+    font-family: 'VT323';
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 3px 3px #000000;
+}   
+
+p{
+    font-family: 'VT323';
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    text-align: left;
+}   
+
+a{
+    text-decoration: none;
+    font-family: 'VT323';
+    color: rgb(52, 49, 255);
+    font-size: 1.5em;
+    text-align: left;
+}   
+
+/* ################ General & Fixes ################ */
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+*{
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 100%;
+}
+
 body {
-    background: url("../img/tes_start.gif");
-    background-size: 170%;
-    background-position-x: 46.5%;
-    background-position-y: 50%;
-}
-
-h1 {
-    font-family: 'Bahiana', cursive;
-    text-align: center;
-    color: #d43e96;
-    font-size: 48px;
-}
-
-h2 {
-    font-family: 'Bahiana', cursive;
-    text-align: center;
-    color: #d43e96;
-    font-size: 24px;
+    font-size: 25px;
+    background-color: rgb(40, 40, 40);
 }
 
 img {
-    display: block; 
-    max-width: 80vw;
-    width: 800px;
-    margin: 0 auto;
     image-rendering: pixelated;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
+body {
+    overflow-x:hidden;
 }
 
-.socialMedia {
+
+/* ################ Navigation ################ */
+
+nav ul li{
+    font-family: 'VT323';
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
     text-align: center;
-    display:inline-block;
+    margin-right: 30px;
+    opacity: 0.5; 
+    text-shadow: 3px 3px #000000;
+}  
+
+nav ul li:hover{
+    opacity: 1; 
+}  
+
+nav ul{
     width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+nav img {
+    height: 90%;
 }
 
-.fa:hover {
-    opacity: 0.7;
+/* - Desktop */
+
+.navbar-desktop{
+    position:fixed;
+    width: 100%;
+    right: 0;
 }
 
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
+/* - Mobile */
+
+.navbar-mobile{
+    visibility: hidden;
+    position:fixed;
+    
+}
+
+
+/* ################ 0: Site Wrapper ################ */
+
+.grid-wrapper{
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+    image-rendering: pixelated;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . ."
+}
+
+#site-wrapper{
+    height: 400vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hom"
+    "scr"
+    "cha"
+    "abo"
+    "fot"   
+}
+
+/* ################ 1: Overlay Wrapper ################ */
+
+#overlay-wrapper{
+    visibility: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    grid-template-areas: 
+    ". . ."
+    ". scp ."
+    ". . ."
+}
+
+#screenshot-preview{
+    z-index: 11;
+    grid-area: scp;
+    width: 80vw;
+}
+#cancel{
+    grid-area: can;
+}
+
+/* ################ 2: Home Wrapper ################ */
+
+#home-wrapper{
+    grid-area: hom;
+    background-image: url("../img/wall.png");
+}
+
+/* ################ 3: Screenshots Wrapper ################ */
+
+#screenshots-wrapper{
+    grid-area: scr;
+    background-image: url("../img/website-wall.png");
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+    ". ti1 ."
+    "sc1 sc2 sc3"
+    "sc4 sc5 sc6"
+}
+
+.screenshots{
+    width: 80%;
+    outline: 5px solid rgb(0, 0, 0);
+    margin:auto;
+    filter: brightness(70%);
+}
+.screenshots:hover{
+    filter: brightness(100%);
+}
+#title-screenshots{
+    grid-area: ti1;
+}
+#screenshot-1{
+    grid-area: sc1;
+}
+#screenshot-2{
+    grid-area: sc2;
+}
+#screenshot-3{
+    grid-area: sc3;
+}
+#screenshot-4{
+    grid-area: sc4;
+}
+#screenshot-5{
+    grid-area: sc5;
+}
+#screenshot-6{
+    grid-area: sc6;
+}
+#screenshot-7{
+    grid-area: sc7;
+}
+#screenshot-8{
+    grid-area: sc8;
+}
+#screenshot-9{
+    grid-area: sc9;
+}
+
+/* ################ 4: Characters Wrapper ################ */
+
+#characters-wrapper{
+    visibility: visible;
+    grid-area: cha;
+    background-image: url("../img/website-wall.png");
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 0.5fr 1fr 1fr;
+    grid-template-areas: 
+    ". ti2 ."
+    ". chn chp"
+    "chs chb chp"
+    ". chb chp"
+}
+
+#character-portrait{
+    grid-area: chp;
+    width: 110%;
+    margin-top:auto;
+}
+#character-bios{
+    margin: 20px;
+    grid-area: chb;
+}
+#character-name{
+    margin-bottom: -50%;
+    grid-area: chn;
+}
+#character-selection{
+    grid-area: chs;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#character-selection li img{
+    height: 200px;
+    opacity: 0.5;
+}
+#character-selection li img:hover{
+    opacity: 0.85;
+}
+.screenshots:hover{
+    filter: brightness(100%);
+}
+#title-characters{
+    grid-area: ti2;
+}
+
+/* ################ 5: About Wrapper ################ */
+
+#about-wrapper{
+    grid-area: abo;
+    height: 100vh;
+    background-image: url("../img/website-wall.png");
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+    "ti3 ti3"
+    "ab1 ab2"
+    "ab3 ab4"
+    
+}
+
+.about-person{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.about-person img{
+    height: 350px;
+}
+#about-1{
+    grid-area: ab1;
+}
+#about-2{
+    grid-area: ab2;
+}
+#about-3{
+    grid-area: ab3;
+}
+#about-4{
+    grid-area: ab4;
+}
+
+/* ################ 6: Footer Wrapper ################ */
+
+#footer-wrapper{
+    grid-area: fot;
+    background-image: url("../img/wall-bottom.png");
+    height: 25vh;
+    grid-template-areas: 
+    ". . ."
+    "fol fol fol"
+    "foc foc foc"
+}
+
+#footer-links{
+    grid-area: fol;
+    text-align: center;
+}
+#footer-copyright{
+    grid-area: foc;
+    text-align: center;
+}
+
+/* ################ Mobile Support ################ */
+
+@media all and (max-width: 999px){
+    body {
+        font-size: 15px; 
+    }
+    .navbar-desktop{
+        visibility: visible;
+    }
+    #screenshots-wrapper{
+        width: 100vw;
+        overflow:scroll;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #screenshots-wrapper{
+        width: 100vw;
+        overflow:scroll;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #screenshot-4{
+        display: none;
+    }
+    #screenshot-5{
+        display: none;
+    }
+    #screenshot-6{
+        display: none;
+    }
+    .screenshots{
+        width: 50vh;
+        object-fit: cover;
+    }
+    nav ul{
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    nav ul li{
+        text-align: right;
+        font-size: 2.5em;
+    }
+    .about-person img{
+        height: 200px;
+    }
+    #character-portrait{
+        display:none;
+    }
+    #character-selection li img{
+        height: 100px;
+        opacity: 0.5;
+    }
+    #characters-wrapper{
+        grid-template-areas: 
+        ". ti2 ."
+        ". chn chp"
+        "chs chb chb"
+        ". chb chb"
+    }
 }
