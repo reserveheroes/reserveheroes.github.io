@@ -1,6 +1,6 @@
 
-biosDaddy = "It wasn't easy growing up with a single mother in the hood, especially when he was bullied for having small testicles. He was too tired and lazy to do anything against the bullies, until one day when he accidentally mixed together a special mix that made him strong."
-biosYamon = "He grew up in southern Jamaica and lived a good life as a fishermen, until one day when his friends played a prank on him. After he was hit on the head by a giant coconut and stung by a poisonous cactus at the same time, he went a little crazy and became Yamon."
+biosDaddy = "It wasn't easy growing up with a single mother in the hood, especially when he was bullied for having small testicles. He was to tired and lazy to do anything against the bullies, untill one day he accidently mixed together a special mix that made him strong."
+biosYamon = "He grew up in southern Jamaica and lived a good life as a fishermen untill one day his friends played a prank on him. After he was hit on the head by a giant coconut and stung by a poisonous cactus at the same time, he went a little crazy and became Yamon."
 
 // Scrolls to the selected element.
 function scrollToElement(element) {
