@@ -36,3 +36,22 @@ $(document).ready(function() {
         scrollTop: $("#home-wrapper").offset().top
 	}, 100, );
 });
+
+
+// Firebase push Email function 
+
+function saveToFirebase(email) {
+	var emailObject = {
+	    email: email
+	};
+    
+	firebase.database().ref('subscription-entries').push(email).set(emailObject)
+	    .then(function(snapshot) {
+		success(); // some success method
+	    }, function(error) {
+		console.log('error' + error);
+		error(); // some error method
+	    });
+    }
+    
+    
