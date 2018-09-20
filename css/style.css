@@ -7,7 +7,7 @@
 
 h1{
     font-family: 'VT323';
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
     font-size: 4em;
     text-align: center;
     text-shadow: 6px 6px #000000;
@@ -16,7 +16,7 @@ h1{
 h2{
     text-decoration: underline;
     font-family: 'VT323';
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
     font-size: 3em;
     text-align: center;
     text-shadow: 5px 5px #000000;
@@ -25,7 +25,7 @@ h2{
 h3{
     text-decoration: underline;
     font-family: 'VT323';
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
     font-size: 2em;
     text-align: center;
     text-shadow: 3px 3px #000000;
@@ -33,7 +33,7 @@ h3{
 
 p{
     font-family: 'VT323';
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
     font-size: 1.5em;
     text-align: left;
 }   
@@ -84,7 +84,7 @@ body {
 
 nav ul li{
     font-family: 'VT323';
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
     font-size: 1.5em;
     text-align: center;
     margin-right: 30px;
@@ -334,10 +334,10 @@ nav img {
 
 #signup-link {
     font-size: 1em;
-    text-decoration: underline rgb(255, 255, 255);
+    text-decoration: underline rgb(206, 206, 206);
     margin: 0 auto;
     width: 100vw;
-    padding-top: 30%;
+    padding-top: 60vh;
 
 }
 
