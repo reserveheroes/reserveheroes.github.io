@@ -152,13 +152,13 @@ nav img {
 }
 
 #site-wrapper{
-    height: 400vh;
+    height: 200vh; /* 400vh; */
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "hom"
-    "scr"
-    "cha"
+    /* "scr"
+    "cha" */
     "abo"
     "fot"   
 }
