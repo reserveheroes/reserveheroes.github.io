@@ -191,8 +191,24 @@ nav img {
 
 #home-wrapper{
     grid-area: hom;
-    background-image: url("../img/wall.png");
+    background-image: url("../img/wall-filler.png");
 }
+
+#logo{
+    width: 50vw;
+    margin: 0 25vw;
+    position: absolute;
+    animation: MoveUpDown 0.7s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 40vh;
+    }
+    50% {
+      bottom: 41vh;
+    }
+  }
 
 /* ################ 3: Screenshots Wrapper ################ */
 
@@ -314,7 +330,15 @@ nav img {
     "ti3 ti3"
     "ab1 ab2"
     "ab3 ab4"
-    
+}
+
+#signup-link {
+    font-size: 1em;
+    text-decoration: underline rgb(255, 255, 255);
+    margin: 0 auto;
+    width: 100vw;
+    padding-top: 30%;
+
 }
 
 .about-person{
@@ -378,13 +402,13 @@ nav img {
         justify-content: flex-start;
         flex-direction: column;
     }
-    #screenshots-wrapper{
-        width: 100vw;
-        overflow:scroll;
-        display:flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
+    #home-wrapper{
+        grid-area: hom;
+        background-image: url("../img/wall-filler.png");
+    }
+    #logo{
+        width: 80vw;
+        margin: 0 10vw;
     }
     #screenshot-4{
         display: none;
