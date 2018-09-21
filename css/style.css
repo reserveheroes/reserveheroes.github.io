@@ -380,6 +380,10 @@ nav img {
     grid-area: ab4;
 }
 
+#mobile {
+    display: none;
+}
+
 /* ################ 6: Footer Wrapper ################ */
 
 #footer-wrapper{
@@ -407,11 +411,23 @@ nav img {
     body {
         font-size: 15px; 
     }
+    
+#site-wrapper{
+    height: 0px; /* 400vh; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "hom"
+    /* "scr"
+    "cha" */
+    /* "abo" */
+    "fot"   
+}
     .navbar-desktop{
-        visibility: visible;
+        display: none;
     }
     #screenshots-wrapper{
-        width: 100vw;
+        width: 0px;
         overflow:scroll;
         display:flex;
         align-items: center;
@@ -452,6 +468,9 @@ nav img {
     .about-person img{
         height: 200px;
     }
+    #about-wrapper{
+        height: 100vh;
+    }
     #character-portrait{
         display:none;
     }
@@ -466,4 +485,39 @@ nav img {
         "chs chb chb"
         ". chb chb"
     }
+    #mobile {
+        display: block;
+        position: absolute;
+        top: 60vh;
+        font-size: 1em;
+        text-decoration: underline rgb(206, 206, 206);
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 60vh;
+    }
+    50% {
+      bottom: 61vh;
+    }
+  }
+  
+#overlay-wrapper{
+    visibility: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    grid-template-areas: 
+    ". . ."
+    ". scp ."
+    ". . ."
+}
+  
+     
+
 }
