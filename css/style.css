@@ -341,6 +341,22 @@ nav img {
 
 }
 
+#key-img {
+    width: 20vw;
+    margin: 0 40vw;
+    position: absolute;
+    animation: MoveUpDownKey 0.7s linear infinite;
+}
+
+@keyframes MoveUpDownKey {
+    0%, 100% {
+      bottom: -63vh;
+    }
+    50% {
+      bottom: -64vh;
+    }
+  }
+
 .about-person{
     display: flex;
     flex-direction: column;
