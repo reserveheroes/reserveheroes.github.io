@@ -17,7 +17,7 @@ function previewImage(imageFilePath) {
 };
 function previewRemove() {
 	$("#overlay-wrapper").css( "visibility", "hidden" );
-};
+ };
 
 // Loads the character avatar and text from the location.
 function previewCharacter(characterName) {

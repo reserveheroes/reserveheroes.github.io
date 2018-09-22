@@ -333,7 +333,7 @@ nav img {
 }
 
 #signup-link {
-    font-size: 1em;
+    font-size: 0.6em;
     text-decoration: underline rgb(206, 206, 206);
     margin: 0 auto;
     width: 100vw;
@@ -380,7 +380,7 @@ nav img {
     grid-area: ab4;
 }
 
-#mobile {
+#mobile-slignup-link {
     display: none;
 }
 
@@ -390,9 +390,11 @@ nav img {
     grid-area: fot;
     background-image: url("../img/wall-bottom.png");
     height: 25vh;
+    padding-bottom: 7vh;
     grid-template-areas: 
     ". . ."
     "fol fol fol"
+    "fom fom fom"
     "foc foc foc"
 }
 
@@ -400,6 +402,12 @@ nav img {
     grid-area: fol;
     text-align: center;
 }
+
+#footer-mail{
+    grid-area: fom;
+    text-align: center;
+}
+
 #footer-copyright{
     grid-area: foc;
     text-align: center;
@@ -469,7 +477,7 @@ nav img {
         height: 200px;
     }
     #about-wrapper{
-        height: 100vh;
+        display: none;
     }
     #character-portrait{
         display:none;
@@ -485,39 +493,45 @@ nav img {
         "chs chb chb"
         ". chb chb"
     }
-    #mobile {
+    #mobile-slignup-link {
         display: block;
         position: absolute;
         top: 60vh;
-        font-size: 1em;
+        font-size: 0.6em;
         text-decoration: underline rgb(206, 206, 206);
         margin: 0 auto;
         width: 100vw;
     }
 
     
-@keyframes MoveUpDown {
-    0%, 100% {
-      bottom: 60vh;
+    @keyframes MoveUpDown {
+        0%, 100% {
+        bottom: 60vh;
+        }
+        50% {
+        bottom: 61vh;
+        }
     }
-    50% {
-      bottom: 61vh;
+    
+    #overlay-wrapper{
+        visibility: hidden;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        width: 100vw;
+        max-height: 100%;
+        z-index: 10;
+        grid-template-areas: 
+        ". . ."
+        ". scp ."
+        ". . ."
     }
-  }
-  
-#overlay-wrapper{
-    visibility: hidden;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.85);
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    grid-template-areas: 
-    ". . ."
-    ". scp ."
-    ". . ."
-}
-  
-     
+
+    .grid-wrapper {
+        max-height: 100%;
+    }
+
+    #footer-wrapper{
+        height: 20vh;
+    }    
 
 }
