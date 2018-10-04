@@ -333,7 +333,7 @@ nav img {
 }
 
 #signup-link {
-    font-size: 0.6em;
+    font-size: 1.5em;
     text-decoration: underline rgb(206, 206, 206);
     margin: 0 auto;
     width: 100vw;
@@ -341,12 +341,18 @@ nav img {
 
 }
 
-#key-img {
+#key-img{
+    width: 20vw;
+}
+
+#key-img-link {
     width: 20vw;
     margin: 0 40vw;
     position: absolute;
     animation: MoveUpDownKey 0.7s linear infinite;
 }
+
+
 
 @keyframes MoveUpDownKey {
     0%, 100% {
